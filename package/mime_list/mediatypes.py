@@ -69,7 +69,11 @@ QUERY = ('SELECT "register_mediatype"."template" '
         'FROM "register_mediatype" '
         'WHERE "register_mediatype"."name" = "{ext}"')
 
-PATH = '../db.sqlite3'
+from pathlib import Path
+
+HERE = Path(__file__).parent
+
+PATH = HERE / 'TYPES'
 
 UNDEFINED = {}
 

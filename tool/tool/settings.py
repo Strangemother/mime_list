@@ -74,6 +74,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'tool.wsgi.application'
 
+PACKAGE_BASE = BASE_DIR.parent / 'package/mime_list'
+DB_NAME = "TYPES" # 'foo.sqlite3'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
@@ -81,7 +83,7 @@ WSGI_APPLICATION = 'tool.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR.parent / 'db.sqlite3',
+        'NAME': PACKAGE_BASE / DB_NAME,
     }
 }
 
